@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="762.0" prefWidth="1414.0" style="-fx-background-color: #192B42;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.ucenfotec.tl.principalAdministradorController">
+   <children>
+      <VBox prefHeight="762.0" prefWidth="279.0" style="-fx-background-color: #288C93;">
+         <children>
+            <Pane fx:id="panelBotones" prefHeight="99.0" prefWidth="279.0" style="-fx-background-color: #0E6876;">
+               <children>
+                  <Label layoutX="55.0" layoutY="29.0" text="Aereopuerto CR" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Button fx:id="btnVuelos" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="64.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Vuelos" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="293.0" layoutY="166.0">
+         <children>
+            <GridPane fx:id="pnVuelos" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblVuelos" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="VueNumVuelo" prefWidth="75.0" text="N° Vuelo" />
+                        <TableColumn fx:id="VueHoraLlegada" prefWidth="75.0" text="Hora Llegada" />
+                        <TableColumn fx:id="VueHoraSalida" prefWidth="75.0" text="Hora Salida" />
+                        <TableColumn fx:id="VueEstado" prefWidth="75.0" text="Estado" />
+                        <TableColumn fx:id="VueLineaAerea" prefWidth="95.0" text="Linea Aérea" />
+                        <TableColumn fx:id="VueAereoSalida" prefWidth="115.0" text="Aereopuerto Salida" />
+                        <TableColumn fx:id="VueAereoDestino" prefWidth="123.0" text="Aereopuerto Destino" />
+                        <TableColumn fx:id="VueAvion" prefWidth="60.0" text="Avion" />
+                        <TableColumn fx:id="VueSalaSalida" prefWidth="79.0" text="Sala Salida" />
+                        <TableColumn fx:id="VueSalaDestino" prefWidth="81.0" text="Sala Destino" />
+                        <TableColumn fx:id="VuePaisSalida" prefWidth="75.0" text="País Salida" />
+                        <TableColumn fx:id="VuePaisDestino" prefWidth="78.0" text="País Destino" />
+                        <TableColumn fx:id="VueTripulacion" prefWidth="94.0" text="Tripulación" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarVuelos" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Registrar" textFill="#192b42" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+      <Pane fx:id="panelStatus" layoutX="293.0" layoutY="14.0" prefHeight="140.0" prefWidth="1102.0">
+         <children>
+            <Label fx:id="lblStatus" layoutX="450.0" layoutY="45.0" text="Administradores" textFill="WHITE">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

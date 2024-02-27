@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="762.0" prefWidth="1414.0" style="-fx-background-color: #192B42;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.ucenfotec.tl.principalUsuarioController">
+   <children>
+      <VBox prefHeight="762.0" prefWidth="279.0" style="-fx-background-color: #288C93;">
+         <children>
+            <Pane fx:id="panelBotones" prefHeight="99.0" prefWidth="279.0" style="-fx-background-color: #0E6876;">
+               <children>
+                  <Label layoutX="55.0" layoutY="29.0" text="Aereopuerto CR" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Button fx:id="btnMiPerfil" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#cambioMiPerfil" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Mi perfil" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCarrito" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cambioCarrito" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Carrito" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnBuscarVuelos" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="64.0" mnemonicParsing="false" onAction="#cambioBuscarVuelos" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Buscar Vuelos" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnMisTickets" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="219.0" mnemonicParsing="false" onAction="#cambioMisTickets" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Mis tickets" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="293.0" layoutY="166.0">
+         <children>
+            <GridPane fx:id="pnCarrito" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblCarrito" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="CarNumTicket" prefWidth="117.0" text="N° Ticket" />
+                        <TableColumn fx:id="CarNumAsiento" prefWidth="121.0" text="N° Asiento" />
+                        <TableColumn fx:id="CarPrecio" prefWidth="65.0" text="Precio" />
+                        <TableColumn fx:id="CarNumVuelo" prefWidth="140.0" text="N° Vuelo" />
+                        <TableColumn fx:id="CarTipoAsiento" prefWidth="125.0" text="Tipo Asiento" />
+                        <TableColumn fx:id="CarAerSalida" prefWidth="157.0" text="Aereopuerto Salida" />
+                        <TableColumn fx:id="CarAerDestino" prefWidth="166.0" text="Aereopuerto Destino" />
+                        <TableColumn fx:id="CarPaisSalida" prefWidth="99.0" text="País Salida" />
+                        <TableColumn fx:id="CarPaisDestino" prefWidth="110.0" text="País Destino" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="txtBuscarCarrito" alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0" promptText="Buscar">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnEliminarCarrito" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Eliminar" textFill="#192b42">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="btnPagarCarrito" layoutX="447.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Pagar" textFill="#192b42">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnMiTickets" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="960.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="525.0" minHeight="10.0" prefHeight="524.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblTickets" prefHeight="200.0" prefWidth="1113.0" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="TikNumTicket" prefWidth="117.0" text="N° Ticket" />
+                        <TableColumn fx:id="TikNumAsiento" prefWidth="121.0" text="N° Asiento" />
+                        <TableColumn fx:id="TikPrecio" prefWidth="65.0" text="Precio" />
+                        <TableColumn fx:id="TikNumVuelo" prefWidth="140.0" text="N° Vuelo" />
+                        <TableColumn fx:id="TikTipoAsiento" prefWidth="125.0" text="Tipo Asiento" />
+                        <TableColumn fx:id="TikAerSalida" prefWidth="157.0" text="Aereopuerto Salida" />
+                        <TableColumn fx:id="TikAerDestino" prefWidth="166.0" text="Aereopuerto Destino" />
+                        <TableColumn fx:id="TikPaisSalida" prefWidth="99.0" text="País Salida" />
+                        <TableColumn fx:id="TikPaisDestino" prefWidth="110.0" text="País Destino" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="txtBuscarTickets" prefHeight="29.0" prefWidth="732.0">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="600.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnVuelos" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblVuelos" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="VueNumVuelo" prefWidth="75.0" text="N° Vuelo" />
+                        <TableColumn fx:id="VueHoraLlegada" prefWidth="84.0" text="Hora Llegada" />
+                        <TableColumn fx:id="VueHoraSalida" text="Hora Salida" />
+                        <TableColumn fx:id="VueEstado" prefWidth="61.0" text="Estado" />
+                        <TableColumn fx:id="VueLinea" prefWidth="75.0" text="Linea Aérea" />
+                        <TableColumn fx:id="VueAerSalida" prefWidth="124.0" text="Aereopuerto Salida" />
+                        <TableColumn fx:id="VueAerDestino" prefWidth="115.0" text="Aereopuerto Destino" />
+                        <TableColumn fx:id="VueAvion" prefWidth="57.0" text="Avion" />
+                        <TableColumn fx:id="VueSalaSalida" prefWidth="94.0" text="Sala Salida" />
+                        <TableColumn fx:id="VueSalaDestino" prefWidth="90.0" text="Sala Destino" />
+                        <TableColumn fx:id="VuePaisSalida" prefWidth="82.0" text="País Salida" />
+                        <TableColumn fx:id="VuePaisDestino" prefWidth="87.0" text="País Destino" />
+                        <TableColumn fx:id="VueTripulacion" prefWidth="76.0" text="Tripulación" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="txtBuscarVuelos" alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnMiPerfil" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="0.0" prefHeight="107.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="0.0" prefHeight="127.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="txtIdentificacion" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="130.0" right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtNombre" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="120.0" right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtApellidos" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets left="120.0" right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtNacionalidad" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="130.0" right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtCorreo" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="100.0" right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtDireccion" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="120.0" right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtEdad" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="120.0" right="120.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Identificacion:" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Nacionalidad:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Edad:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="80.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Cambio contrasena:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Correo:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Nombre:" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Apellidos:" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Direccion:" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Confirmacion contrasena:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="50.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <PasswordField fx:id="txtContrasena1" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="170.0" right="50.0" />
+                     </GridPane.margin>
+                  </PasswordField>
+                  <PasswordField fx:id="txtContrasena2" layoutX="180.0" layoutY="519.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="170.0" right="50.0" />
+                     </GridPane.margin>
+                  </PasswordField>
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #E1BE54;" text="Cancelar" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCambioContrasena" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #E1BE54;" text="Cambiar Contrasena" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #E1BE54;" text="Guardar" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="270.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+      <Pane fx:id="panelStatus" layoutX="293.0" layoutY="14.0" prefHeight="140.0" prefWidth="1102.0" style="-fx-background-color: #E1BE54;">
+         <children>
+            <Label fx:id="lblTitle" layoutX="450.0" layoutY="45.0" text="Mi Perfil" textFill="WHITE">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

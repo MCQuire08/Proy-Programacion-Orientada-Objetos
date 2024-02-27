@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Quiros_A_Rolando_Proyecto_BL:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Quiros_A_Rolando_Proyecto_BL_jar</output-path>
+    <root id="archive" name="Quiros_A_Rolando_Proyecto_BL.jar">
+      <element id="module-output" name="Quiros_A_Rolando_Proyecto_BL" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Documentos/Librerias de JAVA/mysql-connector-java-8.0.15.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

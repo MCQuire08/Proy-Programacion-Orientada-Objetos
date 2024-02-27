@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="762.0" prefWidth="1414.0" style="-fx-background-color: #192B42;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.ucenfotec.tl.principalAdministradorController">
+   <children>
+      <VBox prefHeight="762.0" prefWidth="279.0" style="-fx-background-color: #288C93;">
+         <children>
+            <Pane fx:id="panelBotones" prefHeight="99.0" prefWidth="279.0" style="-fx-background-color: #0E6876;">
+               <children>
+                  <Label layoutX="55.0" layoutY="29.0" text="Aereopuerto CR" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Button fx:id="btnAdministradores" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Administradores" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnMiembros" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Miembros" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnVuelos" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="64.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Vuelos" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnPaises" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Países" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnTripulacion" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Tripulaciones" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnLineaAerea" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Líneas Aéreas" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAvion" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Aviónes" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSala" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="439.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Salas" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAereopuerto" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="279.0" style="-fx-background-color: #288C93;" text="Aereopuerto" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="293.0" layoutY="166.0">
+         <children>
+            <GridPane fx:id="pnMiembros" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblMiembros" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="MiemId" prefWidth="60.0" text="Id" />
+                        <TableColumn fx:id="MiemNombre" prefWidth="77.0" text="Nombre" />
+                        <TableColumn fx:id="MiemApellidos" prefWidth="111.0" text="Apellidos" />
+                        <TableColumn fx:id="MiemNacionalidad" prefWidth="115.0" text="Nacionalidad" />
+                        <TableColumn fx:id="MiemCorreo" prefWidth="70.0" text="Correo" />
+                        <TableColumn fx:id="MiemDireccion" prefWidth="126.0" text="Direccion" />
+                        <TableColumn fx:id="MiemGenero" prefWidth="84.0" text="Genero" />
+                        <TableColumn fx:id="MiemAnosExp" prefWidth="60.0" text="Años Exp." />
+                        <TableColumn fx:id="MiemGrad" prefWidth="98.0" text="Fecha Graduacion" />
+                        <TableColumn fx:id="MiemNumLic" prefWidth="78.0" text="N° Licencia" />
+                        <TableColumn fx:id="MiemPuesto" prefWidth="93.0" text="Puesto" />
+                        <TableColumn fx:id="MiemTelefono" prefWidth="128.0" text="Telefono" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnMiembro" mnemonicParsing="false" onAction="#registrarMiembro" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #E1BE54;" text="Registrar" textFill="#192b42">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnTripulacion" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblTripulacion" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="TriCodigo" prefWidth="75.0" text="Código" />
+                        <TableColumn fx:id="TriNombre" prefWidth="75.0" text="Nombre" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarTripulacion" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Registrar" textFill="#192b42" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnLineasAereas" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblLineasAereas" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="LinCedulaJuridica" prefWidth="265.0" text="Cédula Jurídica" />
+                        <TableColumn fx:id="LinNombre" prefWidth="297.0" text="Nombre" />
+                        <TableColumn fx:id="LinNombreEmpresa" prefWidth="375.0" text="Nombre Empresa" />
+                        <TableColumn fx:id="LinLogo" prefWidth="163.0" text="Logo" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarLineaAerea" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Registrar" textFill="#192b42" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnPaises" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblPais" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="PaisCodigo" prefWidth="273.0" text="Código" />
+                        <TableColumn fx:id="PaisNombre" prefWidth="283.0" text="Nombre" />
+                        <TableColumn fx:id="PaisAbreviatura" prefWidth="283.0" text="Abreviatura" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarPais" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Registrar" textFill="#192b42" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnAviones" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblAviones" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="AviPlaca" prefWidth="304.0" text="Placa" />
+                        <TableColumn fx:id="AviMarca" prefWidth="273.0" text="Marca" />
+                        <TableColumn fx:id="AviModelo" prefWidth="291.0" text="Modelo" />
+                        <TableColumn fx:id="AviCapacidad" prefWidth="232.0" text="Capacidad" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarAviones" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Registrar" textFill="#192b42" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnAdministrador" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+              <columnConstraints>
+                <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="tblAdministradores" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="AdminId" prefWidth="130.0" text="ID" />
+                      <TableColumn fx:id="AdminNombre" prefWidth="106.0" text="Nombre" />
+                        <TableColumn fx:id="AdminApellidos" prefWidth="86.0" text="Apellidos" />
+                        <TableColumn fx:id="AdminNacionalidad" prefWidth="156.0" text="Nacionalidad" />
+                        <TableColumn fx:id="AdminCorreo" prefWidth="218.0" text="Correo" />
+                        <TableColumn fx:id="AdminDireccion" prefWidth="266.0" text="Direccion" />
+                        <TableColumn fx:id="AdminEdad" prefWidth="63.0" text="Edad" />
+                        <TableColumn fx:id="AdminGenero" prefWidth="75.0" text="Genero" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="437.0" promptText="Buscar">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnRegistrar" mnemonicParsing="false" onAction="#registrarAdministrador" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: E1BE54;" text="Registrar" textFill="#192b42">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnSalas" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblSalas" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="SalCodigo" prefWidth="260.0" text="Código" />
+                        <TableColumn fx:id="SalNombre" prefWidth="266.0" text="Nombre" />
+                        <TableColumn fx:id="SalUbicacion" prefWidth="574.0" text="Ubicación" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarSala" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #e1be54;" text="Registrar" textFill="#192b42">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnAereopuerto" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblAereopuerto" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="AerCodigo" prefWidth="247.2000732421875" text="Codigo" />
+                        <TableColumn fx:id="AerNombre" prefWidth="512.7998657226562" text="Nombre" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnRegistrarAereopuerto" mnemonicParsing="false" onAction="#registrarAereopuerto" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #E1BE54;" text="Registrar" textFill="#192b42">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnVuelos" layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1101.0" style="-fx-background-color: #F4F4F4;">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="282.4" minHeight="10.0" prefHeight="63.399984741210915" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="518.400015258789" minHeight="10.0" prefHeight="511.40001525878904" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TableView fx:id="tblVuelos" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="VueNumVuelo" prefWidth="75.0" text="N° Vuelo" />
+                        <TableColumn fx:id="VueHoraLlegada" prefWidth="75.0" text="Hora Llegada" />
+                        <TableColumn fx:id="VueHoraSalida" prefWidth="75.0" text="Hora Salida" />
+                        <TableColumn fx:id="VueEstado" prefWidth="75.0" text="Estado" />
+                        <TableColumn fx:id="VueLineaAerea" prefWidth="95.0" text="Linea Aérea" />
+                        <TableColumn fx:id="VueAereoSalida" prefWidth="115.0" text="Aereopuerto Salida" />
+                        <TableColumn fx:id="VueAereoDestino" prefWidth="123.0" text="Aereopuerto Destino" />
+                        <TableColumn fx:id="VueAvion" prefWidth="60.0" text="Avion" />
+                        <TableColumn fx:id="VueSalaSalida" prefWidth="79.0" text="Sala Salida" />
+                        <TableColumn fx:id="VueSalaDestino" prefWidth="81.0" text="Sala Destino" />
+                        <TableColumn fx:id="VuePaisSalida" prefWidth="75.0" text="País Salida" />
+                        <TableColumn fx:id="VuePaisDestino" prefWidth="78.0" text="País Destino" />
+                        <TableColumn fx:id="VueTripulacion" prefWidth="94.0" text="Tripulación" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="BASELINE_LEFT" prefHeight="34.0" prefWidth="337.0">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#registrarVuelos" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #e1be54;" text="Registrar Inicial" textFill="#192b42" />
+                        <Button layoutX="447.0" layoutY="29.0" mnemonicParsing="false" onAction="#registrarVueloAvanzado" prefHeight="26.0" prefWidth="139.0" style="-fx-background-color: #e1be54;" text="Registro Avanzado" textFill="#192b42">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #288c93;" />
+         </children>
+      </StackPane>
+      <Pane fx:id="panelStatus" layoutX="293.0" layoutY="14.0" prefHeight="140.0" prefWidth="1102.0">
+         <children>
+            <Label fx:id="lblStatus" layoutX="450.0" layoutY="45.0" text="Bienvenidos" textFill="WHITE">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
